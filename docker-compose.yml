@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    container_name: node
+    image: node:12-alpine
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/var/www/nodejs-example
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
